@@ -1,0 +1,41 @@
+<html>
+<body>
+<center>
+  <h2>Tiny Dungeon - Tile Generator</h2>
+  <canvas id="canvas" width="300" height="300"></canvas>
+<div id=buttons></div>
+<br/>
+<textarea id="matrix"></textarea>
+  <button id="loadFromMatrix">Load</button>
+</center>
+<style>
+@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+input[type=button] {
+  border: none;
+  padding: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+  height:16px;
+  width:16px;
+}
+
+textarea {
+  font-family: Consolas, Lucida Console, monospace;
+  height:150px;
+  width:800px;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+#canvas {
+  outline: 1px solid black;
+}
+</style>
+<script src="./index.js"></script>
+</body>
+</html>

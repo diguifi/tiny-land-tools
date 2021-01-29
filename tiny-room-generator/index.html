@@ -1,0 +1,68 @@
+<html>
+<body>
+<center>
+  <h2>Tiny Land- Room Generator</h2>
+  <div id="layers">
+    <canvas id="background" width="300" height="300" class="canvas-layer"></canvas>
+    <canvas id="solid" width="300" height="300" class="canvas-layer"></canvas>
+  </div>
+  <br/>
+  <button id="selectBackground">Background Layer</button>
+  <button id="selectSolid">Solid Layer</button>
+  <br/>
+  <br/>
+  <button id="bucket">💧 bucket</button>
+  <button id="clear">🚽 clear</button>
+  <br/>
+<div id=buttons></div>
+<br/>
+<b>Background layer</b><br/>
+<textarea id="matrix-bg"></textarea>
+<br/><b>Solid layer</b><br/>
+<textarea id="matrix-so"></textarea>
+</center>
+
+<style>
+@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+input[type=button] {
+  border: none;
+  padding: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+  height:16px;
+  width:16px;
+}
+
+textarea {
+  font-family: Consolas, Lucida Console, monospace;
+  height:150px;
+  width:800px;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.canvas-layer {
+  position: absolute;
+  z-index: 0;
+}
+
+.canvas-btn {
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  outline: 1px solid gray;
+  cursor: pointer;
+}
+
+#background, #solid {
+  outline: 1px solid black;
+}
+</style>
+<script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<body>
+<center>
+  <h2>Tiny Dungeon - Map Generator</h2>
+  <div id="layers">
+    <canvas id="background" width="300" height="300" class="canvas-layer"></canvas>
+    <canvas id="icons" width="300" height="300" class="canvas-layer"></canvas>
+    <canvas id="tooltips" width="300" height="300" class="canvas-layer"></canvas>
+  </div>
+  <br/>
+  <br/>
+<div id=buttons></div>
+<br/>
+</center>
+<style>@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+input[type=button] {
+  border: none;
+  padding: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+  height:16px;
+  width:16px;
+}
+
+textarea {
+  font-family: Consolas, Lucida Console, monospace;
+  height:150px;
+  width:800px;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.canvas-layer {
+  position: absolute;
+  z-index: 0;
+}
+
+.canvas-btn {
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  outline: 1px solid gray;
+  cursor: pointer;
+}
+
+#background, #solid {
+  outline: 1px solid black;
+}</style>
+<script src="./icons.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
