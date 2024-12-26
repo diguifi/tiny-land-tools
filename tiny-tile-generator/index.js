@@ -241,7 +241,7 @@ class DrawingBoard {
   
   loadFromOutputMatrix() {
     const indexArray = this.output.value.indexOf('[')
-    const cleanedOutput = `${this.output.value.substring(indexArray).replace(/\r?\n|\r|\t| +/g,'').slice(0,-3)}]`
+    const cleanedOutput = `${this.output.value.substring(indexArray).replaceAll(/\r?\n|\r|\s|\t| +/g,'').slice(0,-3)}]`
     let translatedOutput = ''
     for (let i = 0; i < cleanedOutput.length; i++) {
       const isValidValue = (cleanedOutput[i] != '[') && (cleanedOutput[i] != ']') && (cleanedOutput[i] != ',')
